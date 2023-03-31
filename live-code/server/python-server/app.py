@@ -10,7 +10,9 @@ socketio = SocketIO(app) # samma sak som "new SocketIO" i javascript
 socketio.init_app(app, cors_allowed_origins="*")
 jwt = JWTManager(app)
 
-app.config["JWT_SECRET_KEY"] = 'catsareawesomebutdogsareawesometoo';
+#app.config["JWT_SECRET_KEY"] = 'catsareawesomebutdogsareawesometoo'
+app.config["JWT_ALGORITHM"] = 'RS256'
+app.config["JWT_PUBLIC_KEY"] = open('public.pem').read()
 
 # const clients = {}
 clients = {}
