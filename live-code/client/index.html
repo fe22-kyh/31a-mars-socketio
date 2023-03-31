@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.6.1/socket.io.min.js"
+      integrity="sha512-AI5A3zIoeRSEEX9z3Vyir8NqSMC1pY7r5h2cE+9J6FLsoEmSSGLFaqMQw8SWvoONXogkfFrkQiJfLeHLz3+HOg=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="socket.js"></script>
+    <script src="api.js"></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div>
+      <div>
+        <div>
+          <label>Username</label>
+          <input class="username-field" type="text" />
+        </div>
+        <div>
+          <label>Password</label>
+          <input class="password-field" type="text" />
+        </div>
+
+        <button class="login-btn">Login</button>
+      </div>
+
+      <p class="server-info"></p>
+    </div>
+    <div>
+      <h2>My todos</h2>
+
+      <section>
+        <h3>Craft todos</h3>
+        <div>
+          <label>Title</label>
+          <input type="text" class="title-field" />
+        </div>
+        <div>
+          <label>Content</label>
+          <input type="text" class="content-field" />
+        </div>
+        <button class="todo-submit-btn">Save new todo</button>
+      </section>
+
+      <h3>Saved todos</h3>
+      <ul class="todo-list"></ul>
+    </div>
+  </body>
+</html>
