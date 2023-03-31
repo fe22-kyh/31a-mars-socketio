@@ -5,6 +5,13 @@
 - [Live coding examples](live-coding/)
 - [Live coding RSA example](https://github.com/fe22-kyh/31a-mars-socketio/tree/RSA-solution/live-code)
 
+Generate public.pem and private.pem with
+```
+ssh-keygen -t rsa -b 2048 -m pem -f keys              <-- creates two files keys and keys.pub
+ssh-keygen -e -f keys.pub -m PEM >> public.pem        <-- reads public key from keys.pub into public.pem
+cat keys >> private.pem                               <-- reads private key from keys into private.pem
+```
+
 ## Material
 - [Python SocketIO](https://python-socketio.readthedocs.io/en/latest/)
 - [Exampel på express/socketio integration](https://dev.to/admirnisic/real-time-communication-with-socketio-and-nodejs-3ok2)
