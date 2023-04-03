@@ -15,6 +15,8 @@ async function sendData(url, method, data) {
 }
 
 async function authenticate(authDetails) {
+  sessionStorage.clear();
+
   let response = await sendData("http://127.0.0.1:9090/auth/login", "POST", authDetails);
 
   const accessToken = await response.text();
